@@ -6,15 +6,15 @@
   "author": "Andrei George",
   "license": "ISC",
   "scripts": {
-    "serve-dev": "webpack serve --open --config webpack.dev.js",
-    "dev-server": "webpack serve --mode development",
-    "build:prod": "webpack --config webpack.prod.js",
+    "build:prod": "webpack --config webpack.prod.js",        
     "build:dev": "webpack --config webpack.dev.js",
+    "dev-server": "webpack serve --open --config webpack.dev.js",
     "serve": "live-server public/"
   },
   "dependencies": {
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.2",
     "moment": "^2.29.4",
     "node-sass": "^8.0.0",
     "normalize.css": "^8.0.1",
