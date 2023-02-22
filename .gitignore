@@ -1,9 +1,5 @@
 .firebase
 node_modules
-public/bundle.js.LICENSE.txt
-public/bundle.js
-public/bundle.js.map
-public/styles.css
-public/styles.css.map
+public/dist/
 src/playground
 readme.md

@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     entry: './src/app.js',
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'public', 'dist'),
+        publicPath: '/dist/',
         filename: 'bundle.js'
     },
     module: {
@@ -17,10 +18,10 @@ module.exports = {
             test: /\.s?css$/,
             use: [MiniCssExtractPlugin.loader,
                     {
-                    loader: "css-loader",
+                    loader: 'css-loader',
                     options: {sourceMap: true},
                     }, {
-                    loader: "sass-loader",
+                    loader: 'sass-loader',
                     options: {sourceMap: true},
                     }
                 ],
@@ -29,7 +30,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-          filename: "styles.css",
+          filename: 'styles.css',
         })
     ]
 };
