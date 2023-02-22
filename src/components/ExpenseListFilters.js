@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import { connect } from 'react-redux';
 import { DateRangePicker } from 'react-dates';
 import { setTextFilter, sortByAmount, sortByDate, setStartDate, setEndDate } from '../actions/filters';
 
-//Switched to a class based component because we need to track a piece of state 
+
 class ExpenseListFilters extends React.Component {
     state = {
         calendarFocused: null 
