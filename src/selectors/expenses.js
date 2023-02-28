@@ -1,7 +1,6 @@
 import moment from 'moment';
 
 
-//Filtering & Sorting Redux Data
 const getVisibleExpenses = (expenses, {text, sortBy, startDate, endDate}) => {
 
     return expenses.filter((expense) => {
