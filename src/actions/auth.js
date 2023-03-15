@@ -8,4 +8,11 @@ const startLogin = () => {
     };
 };
 
-export default startLogin;
+const startLogout = () => {
+    return () => {
+        return googleAuth.signOut();
+    };
+};
+
+export { startLogin, startLogout };
+
