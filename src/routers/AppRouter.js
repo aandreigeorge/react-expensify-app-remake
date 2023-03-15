@@ -5,6 +5,7 @@ import EditExpensePage from '../components/EditExpensePage';
 import ExpenseDashBoardPage from '../components/ExpenseDashboardPage';
 import Header from '../components/Header';
 import HelpPage from '../components/HelpPage';
+import LoginPage from '../components/LoginPage';
 import NotFoundPage from '../components/NotFoundPage';
 
 
@@ -12,7 +13,8 @@ const AppRouter = () => (
     <BrowserRouter>
         <Header/>
         <Routes>
-            <Route path='/' element={<ExpenseDashBoardPage/>} />
+            <Route path='/' element={<LoginPage/>} />
+            <Route path='/dashboard' element={<ExpenseDashBoardPage/>} />
             <Route path='/create' element={<AddExpensePage/>} />
             <Route path='edit/:id' element={<EditExpensePage/> } />
             <Route path='/help' element={<HelpPage/>} />
