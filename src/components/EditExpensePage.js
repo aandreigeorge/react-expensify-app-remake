@@ -18,13 +18,13 @@ const EditExpensePage = () => {
                 expense={expense}
                 onSubmit={(expense) => {
                     dispatch(startEditExpense(id, expense));
-                    navigate('/');
+                    navigate('/dashboard');
                 }}
             />
             <button
                 onClick={(expense) => {
                     dispatch(startRemoveExpense({id})); 
-                    navigate('/');
+                    navigate('/dashboard');
                 }}
             >Remove Expense</button>
         </div>

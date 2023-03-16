@@ -6,11 +6,14 @@ import Header from '../components/Header';
 import HelpPage from '../components/HelpPage';
 import LoginPage from '../components/LoginPage';
 import NotFoundPage from '../components/NotFoundPage';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { unstable_HistoryRouter as HistoryRouter, BrowserRouter, Route, Routes } from 'react-router-dom';
+import { createBrowserHistory } from 'history'
 
+
+export const history = createBrowserHistory();
 
 const AppRouter = () => (
-    <BrowserRouter>
+    <HistoryRouter history={history}>
         <Header/>
         <Routes>
             <Route path='/' element={<LoginPage/>} />
@@ -20,7 +23,7 @@ const AppRouter = () => (
             <Route path='/help' element={<HelpPage/>} />
             <Route path='*' element={<NotFoundPage/>} />
         </Routes>
-    </BrowserRouter>
+    </HistoryRouter>
 );
 
 export default AppRouter;

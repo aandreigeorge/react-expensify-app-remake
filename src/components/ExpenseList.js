@@ -6,14 +6,14 @@ import { connect } from 'react-redux';
 
 const ExpenseList = (props) => (
     <div>
-    {
-        props.expenses.length === 0 ? (
-          <p>No expenses</p>
-        ) : (
-            props.expenses.map((expense) => {
-              return <ExpenseListItem key={expense.id} {...expense} />;
-            })
-          )
+      {
+          props.expenses.length === 0 ? (
+            <p>No expenses</p>
+          ) : (
+              props.expenses.map((expense) => {
+                return <ExpenseListItem key={expense.id} {...expense} />;
+              })
+            )
       }
     </div>
 );

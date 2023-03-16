@@ -1,7 +1,7 @@
 import React from 'react';
+import numeral from 'numeral';
 import getVisibleExpenses from '../selectors/expenses';    
 import expensesTotal from '../selectors/expenses-total';
-import numeral from 'numeral';
 import { connect } from 'react-redux';
 
 
