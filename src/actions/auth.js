@@ -8,11 +8,20 @@ export const startLogin = () => {
     };
 };
 
+export const login = (uid) => ({
+    type: 'LOGIN',
+    uid
+});
+
 export const startLogout = () => {
     return () => {
         return googleAuth.signOut();
     };
 };
+
+export const logout = () => ({
+    type: 'LOGOUT'
+});
 
 
 
