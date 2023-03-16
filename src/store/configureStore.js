@@ -1,6 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit'
 import expenseReducer from '../reducers/expenses';
 import filterReducer from '../reducers/filters';
+import { configureStore } from '@reduxjs/toolkit'
 
 
 export default () => {
