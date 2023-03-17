@@ -13,6 +13,7 @@ class ExpenseListFilters extends React.Component {
         this.props.dispatch(setStartDate(startDate));
         this.props.dispatch(setEndDate(endDate));
     };
+    
     onFocusChange = (calendarFocused) => {
         this.setState(() => ({ calendarFocused }));
     };
@@ -57,10 +58,8 @@ class ExpenseListFilters extends React.Component {
     }
 };
 
-const mapStateToProps = (state) => {
-    return {
-        filters: state.filters
-    }
-};
+const mapStateToProps = (state) => ({
+    filters: state.filters
+});
 
 export default connect(mapStateToProps)(ExpenseListFilters)

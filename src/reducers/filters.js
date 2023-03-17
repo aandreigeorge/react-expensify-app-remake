@@ -40,7 +40,7 @@ const filtersReducer = (state = filtersReducerDefaultState , action) => {
                 ...state, 
                 endDate: action.endDate
             };
-            
+
         default: return state
     }
 };
