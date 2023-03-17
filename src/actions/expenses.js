@@ -86,3 +86,8 @@ const removeExpense = ( {id} = {} ) => ({
     id
 });
 
+
+export const clearExpensesAfterLogout = () => ({
+    type: 'CLEAR_EXPENSES_AFTER_LOGOUT'
+});
+

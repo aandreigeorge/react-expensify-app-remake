@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import configureStore from './store/configureStore';
 import AppRouter, { history } from './routers/AppRouter';
-import { startSetExpenses } from './actions/expenses';
+import { startSetExpenses, clearExpensesAfterLogout } from './actions/expenses';
 import { login, logout } from './actions/auth';
 import { Provider } from 'react-redux';
 import { googleAuth } from './firebase/firebase';
@@ -36,6 +36,7 @@ googleAuth.onAuthStateChanged((user) => {
         }
     } else {
         store.dispatch(logout());
+        store.dispatch(clearExpensesAfterLogout());
         renderApp();
         history.push('/');  
     }

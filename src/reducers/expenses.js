@@ -25,7 +25,10 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
             });   
             
         case 'REMOVE_EXPENSE':
-            return state.filter( ({id}) => id !== action.id );        
+            return state.filter( ({id}) => id !== action.id );
+            
+        case 'CLEAR_EXPENSES_AFTER_LOGOUT':
+            return [];    
 
         default: return state;
     }
