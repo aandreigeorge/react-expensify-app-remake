@@ -4,8 +4,12 @@ import { startLogin } from '../actions/auth';
 
 
 const LogInPage = (props) => (
-        <div>
-            <button onClick={props.dispatch(startLogin)}>Login</button>
+        <div className='box-layout'>
+            <div className='box-layout__box'>
+                <h1 className='box-layout__title'>Expense Tracker</h1>
+                <p>Time to take control of your expenses.</p>
+                <button onClick={props.dispatch(startLogin)}>Login</button>
+            </div>
         </div>
 );
 

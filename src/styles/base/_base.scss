@@ -2,7 +2,9 @@ html {
     font-size: 62.5%;
 }
 
-body { 
+body {
+    color: $dark-grey;
+    line-height: 1.6; 
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
 }
