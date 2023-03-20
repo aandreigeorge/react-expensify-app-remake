@@ -8,7 +8,7 @@ const LogInPage = (props) => (
             <div className='box-layout__box'>
                 <h1 className='box-layout__title'>Expense Tracker</h1>
                 <p>Time to take control of your expenses.</p>
-                <button onClick={props.dispatch(startLogin)}>Login</button>
+                <button className='button' onClick={props.dispatch(startLogin)}>Login with Google</button>
             </div>
         </div>
 );
